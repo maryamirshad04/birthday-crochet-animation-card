@@ -49,7 +49,7 @@ const YarnPen = () => {
       {!showLoading && !showMessage && !showStar && (
         <>
           <motion.div
-            className="cursor-pointer absolute top-[15rem] left-[4rem]"
+            className="cursor-pointer absolute top-[10rem] left-[2rem]"
             drag
             whileHover={{ scale: 1.1 }}
             onDragEnd={handleDragEnd}
@@ -64,7 +64,7 @@ const YarnPen = () => {
           </motion.div>
 
           <motion.div
-            className="cursor-pointer absolute top-[15rem] left-[50rem]"
+            className="cursor-pointer absolute top-[10rem] left-[50rem]"
             drag
             whileHover={{ scale: 1.1 }}
           >
@@ -79,12 +79,12 @@ const YarnPen = () => {
         </>
       )}
 
-      {/*Loading*/}
+      {/*Loading Animation */}
       {showLoading && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2 }}
           className="absolute flex flex-col items-center justify-center"
         >
           <motion.img
@@ -101,10 +101,10 @@ const YarnPen = () => {
         </motion.div>
       )}
 
-      {/*Happy Birthday */}
+      {/* 🎉 Happy Birthday */}
       {showMessage && !showStar && (
         <motion.div
-          className="absolute top-[6rem] left-[10rem] cursor-pointer"
+          className="absolute top-[3rem] left-[10rem] cursor-pointer"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
@@ -122,7 +122,7 @@ const YarnPen = () => {
       {/* 🌟 Star Gift Message */}
       {showStar && (
         <motion.div
-          className="absolute top-[6rem] left-[12rem] text-center"
+          className="absolute top-[7rem] left-[32rem] text-center"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
@@ -130,11 +130,11 @@ const YarnPen = () => {
           <img
             src={star}
             alt="Crocheted Star"
-            style={{ height: "30rem", width: "auto" }}
+            style={{ height: "15rem", width: "auto" }}
             className="object-contain mx-auto"
           />
-          <p className="mt-4 text-xl font-medium text-gray-700 w-[30rem]">
-            As promised Ayka, a crocheted star — for now, virtually 🌟 (don't worry, you'll get the real one in uni!)
+          <p className="mt-4 text-xl font-medium text-gray-700 w-[10rem]">
+            As promised, a crocheted star — for now, virtually 🌟 (don't worry, you'll get the real one in uni!)
           </p>
         </motion.div>
       )}
